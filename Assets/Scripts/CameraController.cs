@@ -51,16 +51,16 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     public bool enableBoundaries = true;
 
-    [SerializeField, Range(-10000, 0)]
+    [SerializeField]
     public float BoundaryMinX = -500f;
 
-    [SerializeField, Range(0, 10000)]
+    [SerializeField]
     public float BoundaryMaxX = 500f;
 
-    [SerializeField, Range(-10000, 0)]
+    [SerializeField]
     public float BoundaryMinZ = -500f;
 
-    [SerializeField, Range(0, 10000)]
+    [SerializeField]
     public float BoundaryMaxZ = 500f;
 
     private void Awake()

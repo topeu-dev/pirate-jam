@@ -3,19 +3,23 @@ using UnityEngine;
 
 public class DemonAoeTest : MonoBehaviour
 {
-    private float aoe = 4f;
+    public float aoe = 4f;
+    public float timeToLive = 10f;
     private Collider[] _sphereHitsBuffer = new Collider[40];
     private List<string> appliesTo = new(new[] { "Citizen" });
 
     private List<CitizenController> enchantedCitezens = new();
     
     private LineRenderer lineRenderer;
+    
+    private CapsuleCollider capsuleCollider;
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        
-        Destroy(gameObject, 10f);
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        capsuleCollider.radius = aoe;
+        Destroy(gameObject, timeToLive);
     }
 
     private void Update()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7175610054160797879}
   - component: {fileID: 2988749813540761909}
   - component: {fileID: 780914725828446283}
-  - component: {fileID: 4035936193055858105}
+  - component: {fileID: 1223448247399048110}
   m_Layer: 7
   m_Name: DemonAoeTestInstance
   m_TagString: Demon
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adb06daf0b1490592535afa8eda38ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aoe: 6
+  timeToLive: 15
 --- !u!120 &780914725828446283
 LineRenderer:
   serializedVersion: 2
@@ -153,8 +155,8 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!65 &4035936193055858105
-BoxCollider:
+--- !u!136 &1223448247399048110
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -171,6 +173,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.97, y: 2.0000002, z: 1.0000004}
+  serializedVersion: 2
+  m_Radius: 4
+  m_Height: 4
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
