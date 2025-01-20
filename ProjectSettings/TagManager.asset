@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Citizen
+  - Demon
   layers:
   - Default
   - TransparentFX
@@ -12,8 +13,8 @@ TagManager:
   - Field
   - Water
   - UI
-  - 
-  - 
+  - Obstacle
+  - Demon
   - 
   - 
   - 

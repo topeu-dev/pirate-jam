@@ -27,13 +27,15 @@ public class DemonAoeTest : MonoBehaviour
         {
             if (!_sphereHitsBuffer[i])
                 continue;
-            Debug.Log("Not null " + _sphereHitsBuffer[i].gameObject.name);
 
             if (appliesTo.Contains(_sphereHitsBuffer[i].gameObject.tag))
             {
                 var citizenControl = _sphereHitsBuffer[i].gameObject.GetComponent<CitizenController>();
-                citizenControl.EnchantTo(transform.position);
-                enchantedCitezens.Add(citizenControl);
+                if (!enchantedCitezens?.Contains(citizenControl) == true && !citizenControl.ConvertedSoul)
+                {
+                    citizenControl.EnchantTo(transform.position);
+                    enchantedCitezens.Add(citizenControl);    
+                }
             }
         }
     }
