@@ -49,7 +49,6 @@ public class InteractionManagerTest : MonoBehaviour
         {
             //TODO refactor:
             Instantiate(demonAoePrefab, hit.point, Quaternion.Euler(90f, 0f, 0f));
-            Debug.Log("Clicked");
         }
     }
 

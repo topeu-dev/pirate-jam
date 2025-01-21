@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7366027468010779037
+--- !u!1 &9061996538976154586
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7175610054160797879}
-  - component: {fileID: 2988749813540761909}
-  - component: {fileID: 780914725828446283}
-  - component: {fileID: 1223448247399048110}
+  - component: {fileID: 110373120606033196}
+  - component: {fileID: 6826878867439479494}
+  - component: {fileID: 1976720107296148994}
+  - component: {fileID: 2246312906092802169}
+  - component: {fileID: 3443400350972192905}
   m_Layer: 7
   m_Name: DemonAoeTestInstance
   m_TagString: Demon
@@ -19,28 +20,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7175610054160797879
+--- !u!4 &110373120606033196
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366027468010779037}
+  m_GameObject: {fileID: 9061996538976154586}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -19.69, y: 1, z: -15.92}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &2988749813540761909
+--- !u!114 &6826878867439479494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366027468010779037}
+  m_GameObject: {fileID: 9061996538976154586}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9adb06daf0b1490592535afa8eda38ce, type: 3}
@@ -48,14 +49,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aoe: 6
   timeToLive: 15
---- !u!120 &780914725828446283
+--- !u!120 &1976720107296148994
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366027468010779037}
+  m_GameObject: {fileID: 9061996538976154586}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -155,13 +156,13 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!136 &1223448247399048110
-CapsuleCollider:
+--- !u!135 &2246312906092802169
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366027468010779037}
+  m_GameObject: {fileID: 9061996538976154586}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -170,11 +171,21 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 4
-  m_Height: 16.58
-  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3443400350972192905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061996538976154586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ffefaa552d84483ad5550aae19f1600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

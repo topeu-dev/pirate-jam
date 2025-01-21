@@ -148,8 +148,6 @@ namespace StateMachine.InquisitorState
                     Debug.Log("KILL DEMON!");
                     onCatch?.Invoke();
                 }
-
-                Debug.Log("Chasing Target: " + target.name);
             }
             else
             {

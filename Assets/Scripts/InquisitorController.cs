@@ -1,101 +1,61 @@
-using System;
+using StateMachine.InquisitorState;
 using UnityEngine;
 using UnityEngine.AI;
-using StateMachine.InquisitorState;
 
 public class InquisitorController : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public float detectionRadius = 10f;
     public float timeToLookAround = 1.5f;
-    private NavMeshAgent navMeshAgent;
-    private Animator animator;
-    // private int currentWaypointIndex = 0;
+    public Transform[] waypoints;
 
-    private StateMachine.StateMachine stateMachine;
+    private NavMeshAgent _navMeshAgent;
+    private Animator _animator;
+    private StateMachine.StateMachine _stateMachine;
     private FieldOfView _fieldOfView;
 
-    private PatrolState patrolState;
+    private PatrolState _patrolState;
+    private Transform _currentTarget;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.updatePosition = false;
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent.updatePosition = false;
 
-        animator = GetComponent<Animator>();
-        animator.applyRootMotion = true;
+        _animator = GetComponent<Animator>();
+        _animator.applyRootMotion = true;
 
         _fieldOfView = GetComponentInChildren<FieldOfView>();
 
-        patrolState = new PatrolState(animator, navMeshAgent, waypoints, 0);
+        _patrolState = new PatrolState(_animator, _navMeshAgent, waypoints, 0);
     }
 
     private void OnAnimatorMove()
     {
-        Vector3 animatorRootPos = animator.rootPosition;
-        animatorRootPos.y = navMeshAgent.nextPosition.y;
-        navMeshAgent.nextPosition = animatorRootPos;
+        Vector3 animatorRootPos = _animator.rootPosition;
+        animatorRootPos.y = _navMeshAgent.nextPosition.y;
+        _navMeshAgent.nextPosition = animatorRootPos;
         transform.position = animatorRootPos;
     }
 
     void Start()
     {
-        stateMachine = new StateMachine.StateMachine();
-        stateMachine.ChangeState(patrolState);
+        _stateMachine = new StateMachine.StateMachine();
+        _stateMachine.ChangeState(_patrolState);
 
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        stateMachine.Update();
-
-        Transform enemyTarget = FindTargetInFov();
-        if (enemyTarget)
-        {
-            stateMachine.ChangeState(new ChaseState(enemyTarget, animator, navMeshAgent,
-                () =>
-                {
-                    if (enemyTarget)
-                    {
-                        Destroy(enemyTarget.gameObject);
-                    }
-
-                    stateMachine.ChangeState(patrolState);
-                }));
-        }
-
-        // else
-        // {
-        //     stateMachine.ChangeState(new PatrolState(animator, stateMachine));
-        // }
-        //
-        // // if no enemy and closeTo stopping distance
-        // if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-        // {
-        //     stateMachine.ChangeState(new LookAroundState(timeToLookAround, OnTimeUp));
-        //     return;
-        // }
+        _stateMachine.Update();
     }
-
-    // private void OnTimeUp()
-    // {
-    //     Debug.Log("OnTimeUp");
-    //     MoveToNextWaypoint();
-    //     stateMachine.ChangeState(new PatrolState(animator));
-    // }
 
 
     private void OnDrawGizmosSelected()
     {
-        // Draw detection radius in the editor
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
-
         Gizmos.color = Color.green;
         foreach (Transform waypoint in waypoints)
         {
-            Gizmos.DrawSphere(waypoint.position, 0.3f); // Visualize waypoints
+            Gizmos.DrawSphere(waypoint.position, 0.3f);
         }
     }
 
@@ -113,5 +73,19 @@ public class InquisitorController : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void ChaseDemon(GameObject enemyTarget)
+    {
+        _stateMachine.ChangeState(new ChaseState(enemyTarget.transform, _animator, _navMeshAgent,
+            () =>
+            {
+                if (enemyTarget)
+                {
+                    Destroy(enemyTarget.gameObject);
+                }
+
+                _stateMachine.ChangeState(_patrolState);
+            }));
     }
 }

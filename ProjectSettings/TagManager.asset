@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Citizen
   - Demon
+  - Fov
   layers:
   - Default
   - TransparentFX

@@ -5,66 +5,39 @@ public class DemonAoeTest : MonoBehaviour
 {
     public float aoe = 4f;
     public float timeToLive = 10f;
-    private Collider[] _sphereHitsBuffer = new Collider[40];
-    private List<string> appliesTo = new(new[] { "Citizen" });
 
-    private List<CitizenController> enchantedCitezens = new();
-    
-    private LineRenderer lineRenderer;
-    
-    private CapsuleCollider capsuleCollider;
+    private readonly List<CitizenController> _enchantedCitizens = new();
+
+    private LineRenderer _lineRenderer;
+
+    private SphereCollider _sphereCollider;
 
     private void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
-        capsuleCollider.radius = aoe;
+        _lineRenderer = GetComponent<LineRenderer>();
+        _sphereCollider = GetComponent<SphereCollider>();
+        _sphereCollider.radius = aoe;
         Destroy(gameObject, timeToLive);
     }
 
     private void Update()
     {
         DrawCircle();
-        ClearHitsBuffer();
-        Physics.OverlapSphereNonAlloc(transform.position, aoe, _sphereHitsBuffer);
-        for (var i = 0; i < _sphereHitsBuffer.Length; i++)
-        {
-            if (!_sphereHitsBuffer[i])
-                continue;
-
-            if (appliesTo.Contains(_sphereHitsBuffer[i].gameObject.tag))
-            {
-                var citizenControl = _sphereHitsBuffer[i].gameObject.GetComponent<CitizenController>();
-                if (!enchantedCitezens?.Contains(citizenControl) == true && !citizenControl.ConvertedSoul)
-                {
-                    citizenControl.EnchantTo(transform.position);
-                    enchantedCitezens.Add(citizenControl);    
-                }
-            }
-        }
-    }
-
-    private void ClearHitsBuffer()
-    {
-        for (int i = 0; i < _sphereHitsBuffer.Length; i++)
-        {
-            _sphereHitsBuffer[i] = null;
-        }
     }
 
     private void OnDestroy()
     {
-        for (var i = 0; i < enchantedCitezens.Count; i++)
+        for (var i = 0; i < _enchantedCitizens.Count; i++)
         {
-            enchantedCitezens[i].StopEnchanting();
+            _enchantedCitizens[i].StopEnchanting();
         }
     }
-    
-    
+
+
     void DrawCircle()
     {
-        lineRenderer.positionCount = 50 + 1; 
-        lineRenderer.useWorldSpace = false;
+        _lineRenderer.positionCount = 50 + 1;
+        _lineRenderer.useWorldSpace = false;
 
         float angle = 0f;
         for (int i = 0; i <= 50; i++)
@@ -72,9 +45,14 @@ public class DemonAoeTest : MonoBehaviour
             float x = Mathf.Cos(Mathf.Deg2Rad * angle) * aoe;
             float y = Mathf.Sin(Mathf.Deg2Rad * angle) * aoe;
 
-            lineRenderer.SetPosition(i, new Vector3(x, y, 0f));
+            _lineRenderer.SetPosition(i, new Vector3(x, y, 0f));
 
             angle += 360f / 50;
         }
+    }
+
+    public void AddToEnchantingList(CitizenController citizen)
+    {
+        _enchantedCitizens.Add(citizen);
     }
 }
