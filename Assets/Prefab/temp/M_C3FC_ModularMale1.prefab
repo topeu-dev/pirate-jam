@@ -25912,7 +25912,7 @@ GameObject:
   - component: {fileID: 1215652866403884756}
   - component: {fileID: 5151029073815044603}
   m_Layer: 0
-  m_Name: M_C3FC_ModularMale
+  m_Name: M_C3FC_ModularMale1
   m_TagString: Citizen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
