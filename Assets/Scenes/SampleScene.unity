@@ -279,6 +279,10 @@ MonoBehaviour:
   waypoints:
   - {fileID: 943809907}
   - {fileID: 296894842}
+  _navMeshAgent: {fileID: 0}
+  _animator: {fileID: 0}
+  _fieldOfView: {fileID: 0}
+  _currentTarget: {fileID: 0}
 --- !u!195 &279525342
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2188,7 +2192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f007636b6255458eb3185ed2675ebc56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshFilter: {fileID: 0}
 --- !u!23 &1687180535
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2574,6 +2577,18 @@ PrefabInstance:
     - target: {fileID: 1091374265328783770, guid: b9d883ec88bef24419103af83ee94994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428714273986425246, guid: b9d883ec88bef24419103af83ee94994, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469802375064231848, guid: b9d883ec88bef24419103af83ee94994, type: 3}
+      propertyPath: timeToLookAround
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469802375064231848, guid: b9d883ec88bef24419103af83ee94994, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6469802375064231848, guid: b9d883ec88bef24419103af83ee94994, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
