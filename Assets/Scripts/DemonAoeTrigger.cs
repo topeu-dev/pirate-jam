@@ -1,10 +1,10 @@
-using System;
+using Inquisitor;
 using UnityEngine;
 
 public class DemonAoeTrigger : MonoBehaviour
 {
     private DemonAoeTest demonAoeTest;
-    
+
     private void Awake()
     {
         demonAoeTest = GetComponent<DemonAoeTest>();
@@ -15,7 +15,7 @@ public class DemonAoeTrigger : MonoBehaviour
         if (other.CompareTag("Fov"))
         {
             var inquisitor = other.GetComponentInParent<InquisitorController>();
-            inquisitor.ChaseDemon(transform.gameObject);
+            inquisitor.setTargetToChase(transform.gameObject);
         }
 
         if (other.CompareTag("Citizen"))
