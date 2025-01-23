@@ -12,7 +12,7 @@ public class CitizenController : MonoBehaviour
     private Animator animator;
 
     // public Role role;
-    public List<RoutePoint> routePoints;
+    public List<Transform> routePoints;
 
     public bool isEnchanting = false;
     private float enchantedTime = 0f;
@@ -56,7 +56,7 @@ public class CitizenController : MonoBehaviour
         if (!isEnchanting && (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f))
         {
             Debug.Log("new path");
-            navMeshAgent.destination = routePoints[Random.Range(0, routePoints.Count)].transform.position;
+            navMeshAgent.destination = routePoints[Random.Range(0, routePoints.Count)].position;
         }
     }
 
