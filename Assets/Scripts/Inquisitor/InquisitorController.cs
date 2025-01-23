@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Inquisitor.State;
 using UnityEngine;
 using UnityEngine.AI;
@@ -20,7 +21,7 @@ namespace Inquisitor
         internal InqChaseState ChaseState = new InqChaseState();
 
         internal GameObject enemyToChase;
-        public Transform[] waypoints;
+        public List<Transform> waypoints;
 
         private void Awake()
         {

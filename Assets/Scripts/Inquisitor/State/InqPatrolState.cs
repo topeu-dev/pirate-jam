@@ -29,7 +29,7 @@ namespace Inquisitor.State
         public override void EnterState(InquisitorController inquisitor)
         {
             Debug.Log("Entering Patrol State");
-            _waypoints = inquisitor.waypoints;
+            _waypoints = inquisitor.waypoints.ToArray();
             _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
 
             _animatorRef = inquisitor.GetComponent<Animator>();
