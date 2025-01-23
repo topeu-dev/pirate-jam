@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace TestEditor
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(InquisitorController))]
     public class MyScriptXEditor : Editor
     {
@@ -14,7 +15,7 @@ namespace TestEditor
         void OnSceneGUI()
         {
             // Приводим target к типу нашего скрипта
-            InquisitorController myScript = (InquisitorController) target;
+            InquisitorController myScript = (InquisitorController)target;
 
             // Проверяем, включён ли режим редактирования
             if (!editingPoints) return;
@@ -68,4 +69,5 @@ namespace TestEditor
             }
         }
     }
+#endif
 }

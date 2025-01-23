@@ -1,13 +1,16 @@
+using Money;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class InteractionManagerTest : MonoBehaviour
 {
+    public GameObject demonAoePrefab;
+    public WalletController walletController;
+
     private Camera _mainCamera;
 
-    private bool _spellSelected;
-    public GameObject demonAoePrefab;
+    private int _selectedAction;
 
     private void Awake()
     {
@@ -23,11 +26,7 @@ public class InteractionManagerTest : MonoBehaviour
 
     private void OnRightClick(InputAction.CallbackContext obj)
     {
-        // spell unselected, also Esc should work same
-        if (_spellSelected)
-        {
-            _spellSelected = false;
-        }
+        ResetSpellId();
     }
 
     private void OnDisable()
@@ -44,11 +43,24 @@ public class InteractionManagerTest : MonoBehaviour
             return;
         }
 
-        Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 200f, LayerMask.GetMask("Field")))
+        switch (_selectedAction)
         {
-            //TODO refactor:
-            Instantiate(demonAoePrefab, hit.point, Quaternion.Euler(90f, 0f, 0f));
+            case 0:
+                return;
+            case 1:
+                Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit, 200f, LayerMask.GetMask("Field")))
+                {
+                    if (walletController.HasEnoughMoney(5))
+                    {
+                        walletController.Buy(5);
+                        Instantiate(demonAoePrefab, hit.point, Quaternion.Euler(90f, 0f, 0f));
+                    }
+
+                    ResetSpellId();
+                }
+
+                return;
         }
     }
 
@@ -57,13 +69,13 @@ public class InteractionManagerTest : MonoBehaviour
         return EventSystem.current.IsPointerOverGameObject();
     }
 
-    // private void SelectSceneObject()
-    // {
-    //     Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-    //     if (Physics.Raycast(ray, out RaycastHit hit, 200f))
-    //     {
-    //         selectedObject = hit.collider.gameObject;
-    //         Debug.Log($"Selected object: {selectedObject.name}");
-    //     }
-    // }
+    public void SelectAction(int actionId)
+    {
+        _selectedAction = actionId;
+    }
+
+    private void ResetSpellId()
+    {
+        _selectedAction = 0;
+    }
 }

@@ -15,8 +15,9 @@ namespace Inquisitor.State
             if (inquisitor.enemyToChase)
             {
                 _navMeshAgentRef.SetDestination(inquisitor.enemyToChase.transform.position);
+                // get enemy aoe? 
                 if (Vector3.Distance(_navMeshAgentRef.transform.position, inquisitor.enemyToChase.transform.position)
-                    <= _navMeshAgentRef.stoppingDistance)
+                    <= 3f)
                 {
                     inquisitor.ChangeState(inquisitor.KillingDemonState);
                 }
@@ -30,8 +31,15 @@ namespace Inquisitor.State
         public override void EnterState(InquisitorController inquisitor)
         {
             Debug.Log("Inquisitor entered Killing state");
-            _animatorRef = inquisitor.GetComponent<Animator>();
-            _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            if (!_animatorRef)
+            {
+                _animatorRef = inquisitor.GetComponent<Animator>();
+            }
+
+            if (!_navMeshAgentRef)
+            {
+                _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            }
 
             _navMeshAgentRef.SetDestination(inquisitor.enemyToChase.transform.position);
             _animatorRef.SetBool("isRunning", true);

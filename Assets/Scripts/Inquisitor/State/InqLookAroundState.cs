@@ -27,8 +27,16 @@ namespace Inquisitor.State
         public override void EnterState(InquisitorController inquisitor)
         {
             Debug.Log("Inquisitor entered LookAroundState");
-            _animatorRef = inquisitor.GetComponent<Animator>();
-            _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            if (!_navMeshAgentRef)
+            {
+                _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            }
+
+            if (!_animatorRef)
+            {
+                _animatorRef = inquisitor.GetComponent<Animator>();
+            }
+
             _navMeshAgentRef.isStopped = true;
             _animatorRef.SetBool("isLookingAround", true);
             _elapsedTime = 0f;

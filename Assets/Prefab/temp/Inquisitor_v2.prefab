@@ -16306,10 +16306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToLookAround: 3
   timeToKill: 2
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
 --- !u!1 &5132868572148671855
 GameObject:
   m_ObjectHideFlags: 0

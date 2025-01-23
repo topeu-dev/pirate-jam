@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace TestEditor
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(CitizenController))]
+
     public class CitizenWaypointEditor : Editor
     {
         // Флаг, позволяющий включать/выключать "режим расстановки точек".
@@ -68,4 +70,5 @@ namespace TestEditor
             }
         }
     }
+#endif
 }

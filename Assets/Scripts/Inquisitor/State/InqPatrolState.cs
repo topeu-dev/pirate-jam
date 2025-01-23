@@ -23,17 +23,22 @@ namespace Inquisitor.State
                     inquisitor.ChangeState(inquisitor.LookAroundState);
                 }
             }
-            
         }
 
         public override void EnterState(InquisitorController inquisitor)
         {
             Debug.Log("Entering Patrol State");
             _waypoints = inquisitor.waypoints.ToArray();
-            _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            if (!_navMeshAgentRef)
+            {
+                _navMeshAgentRef = inquisitor.GetComponent<NavMeshAgent>();
+            }
 
-            _animatorRef = inquisitor.GetComponent<Animator>();
-            
+            if (!_animatorRef)
+            {
+                _animatorRef = inquisitor.GetComponent<Animator>();
+            }
+
             _animatorRef.SetBool("isWalking", true);
 
             MoveToNextWaypoint();

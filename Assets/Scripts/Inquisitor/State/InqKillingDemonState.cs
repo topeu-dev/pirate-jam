@@ -26,7 +26,10 @@ namespace Inquisitor.State
         public override void EnterState(InquisitorController inquisitor)
         {
             Debug.Log("Inquisitor entered Killing state");
-            _animatorRef = inquisitor.GetComponent<Animator>();
+            if (!_animatorRef)
+            {
+                _animatorRef = inquisitor.GetComponent<Animator>();                
+            }
             elapsedTime = 0f;
             _animatorRef.SetBool("Kill", true);
         }
