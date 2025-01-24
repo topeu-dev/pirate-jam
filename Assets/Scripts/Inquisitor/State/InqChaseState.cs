@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,9 +14,8 @@ namespace Inquisitor.State
             if (inquisitor.enemyToChase)
             {
                 _navMeshAgentRef.SetDestination(inquisitor.enemyToChase.transform.position);
-                // get enemy aoe? 
                 if (Vector3.Distance(_navMeshAgentRef.transform.position, inquisitor.enemyToChase.transform.position)
-                    <= 3f)
+                    <= 5f)
                 {
                     inquisitor.ChangeState(inquisitor.KillingDemonState);
                 }
@@ -48,6 +46,7 @@ namespace Inquisitor.State
         public override void ExitState(InquisitorController inquisitor)
         {
             _animatorRef.SetBool("isRunning", false);
+            _animatorRef.SetBool("isWalking", false);
         }
     }
 }

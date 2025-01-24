@@ -8,6 +8,7 @@ namespace Utility
         public static readonly SelectableObjectEvents SelectableObject = new SelectableObjectEvents();
         public static readonly CameraEvents CameraEvent = new CameraEvents();
         public static readonly MoneyEvents MoneyEvent = new MoneyEvents();
+        public static readonly GameProgressEvents GameProgressEvent = new GameProgressEvents();
 
 
         public class SelectableObjectEvents
@@ -28,5 +29,15 @@ namespace Utility
             // source - currentAmount - chargedAmount
             public UnityAction<Component, int, int> OnPurchase;
         }
+        
+        public class GameProgressEvents
+        {
+            // source - count of citizen
+            public UnityAction<Component, int> OnStartGame;
+            
+            // source 
+            public UnityAction<Component> OnEnchant;
+        }
+        
     }
 }

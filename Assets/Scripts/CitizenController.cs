@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
+using Utility;
 using Random = UnityEngine.Random;
 
 public class CitizenController : MonoBehaviour
@@ -12,7 +13,7 @@ public class CitizenController : MonoBehaviour
     private Animator animator;
 
     // public Role role;
-    public List<Transform> routePoints;
+    public List<Transform> waypoints;
 
     public bool isEnchanting = false;
     private float enchantedTime = 0f;
@@ -49,6 +50,7 @@ public class CitizenController : MonoBehaviour
                 Debug.Log("Enchanted soul");
                 ConvertedSoul = true;
                 animator.SetBool("isConverted", true);
+                EventManager.GameProgressEvent.OnEnchant?.Invoke(this);
                 StopEnchanting();
             }
         }
@@ -56,7 +58,7 @@ public class CitizenController : MonoBehaviour
         if (!isEnchanting && (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f))
         {
             Debug.Log("new path");
-            navMeshAgent.destination = routePoints[Random.Range(0, routePoints.Count)].position;
+            navMeshAgent.destination = waypoints[Random.Range(0, waypoints.Count)].position;
         }
     }
 
@@ -69,7 +71,6 @@ public class CitizenController : MonoBehaviour
         }
 
         Debug.Log("Enchanted");
-
         isEnchanting = true;
         transform.rotation = Quaternion.LookRotation(transformPosition - transform.position);
         navMeshAgent.isStopped = true;
@@ -81,10 +82,13 @@ public class CitizenController : MonoBehaviour
         isEnchanting = false;
         enchantedTime = 0f;
     }
-}
-
-[Serializable]
-public class RoutePoint
-{
-    public Transform transform;
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        foreach (Transform waypoint in waypoints)
+        {
+            Gizmos.DrawSphere(waypoint.position, 0.5f);
+        }
+    }
 }

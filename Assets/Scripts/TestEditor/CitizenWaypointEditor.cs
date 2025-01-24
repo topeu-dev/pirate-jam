@@ -16,7 +16,7 @@ namespace TestEditor
         void OnSceneGUI()
         {
             // Приводим target к типу нашего скрипта
-            InquisitorController myScript = (InquisitorController) target;
+            CitizenController myScript = (CitizenController) target;
 
             // Проверяем, включён ли режим редактирования
             if (!editingPoints) return;
