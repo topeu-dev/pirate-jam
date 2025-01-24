@@ -8,7 +8,6 @@ namespace Inquisitor.State
         private Animator _animatorRef;
         private NavMeshAgent _navMeshAgentRef;
 
-
         public override void Update(InquisitorController inquisitor)
         {
             if (inquisitor.enemyToChase)

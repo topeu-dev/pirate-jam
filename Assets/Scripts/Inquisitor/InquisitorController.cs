@@ -21,6 +21,7 @@ namespace Inquisitor
         internal InqChaseState ChaseState = new InqChaseState();
 
         internal GameObject enemyToChase;
+        // internal DemonAoeTest enemyToChase;
         public List<Transform> waypoints;
 
         private void Awake()

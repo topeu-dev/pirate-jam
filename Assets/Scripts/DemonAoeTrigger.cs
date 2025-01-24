@@ -5,6 +5,8 @@ public class DemonAoeTrigger : MonoBehaviour
 {
     private DemonAoeTest demonAoeTest;
 
+    private bool isChased;
+
     private void Awake()
     {
         demonAoeTest = GetComponent<DemonAoeTest>();
@@ -12,10 +14,16 @@ public class DemonAoeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isChased)
+        {
+            return;
+        }
+        
         if (other.CompareTag("Fov"))
         {
             var inquisitor = other.GetComponentInParent<InquisitorController>();
             inquisitor.setTargetToChase(transform.gameObject);
+            isChased = true;
         }
 
         if (other.CompareTag("Citizen"))

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Utility;
 
@@ -7,6 +6,7 @@ namespace Game
     public class GameState : MonoBehaviour
     {
         private int _citizenLeft;
+
         private void Start()
         {
             var allCitizen = FindObjectsByType<CitizenController>(FindObjectsSortMode.None);

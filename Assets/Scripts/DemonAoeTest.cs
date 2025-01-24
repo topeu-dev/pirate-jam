@@ -6,6 +6,7 @@ public class DemonAoeTest : MonoBehaviour
     public float aoe = 4f;
     public float timeToLive = 10f;
 
+    private bool _isChased;
     private readonly List<CitizenController> _enchantedCitizens = new();
 
     private LineRenderer _lineRenderer;
@@ -54,5 +55,10 @@ public class DemonAoeTest : MonoBehaviour
     public void AddToEnchantingList(CitizenController citizen)
     {
         _enchantedCitizens.Add(citizen);
+    }
+
+    public bool IsChased()
+    {
+        return _isChased;
     }
 }
