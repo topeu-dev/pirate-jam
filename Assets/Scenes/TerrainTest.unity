@@ -51036,11 +51036,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3832cb469e9c2ee47af1a2d52e4c5efe, type: 3}
   m_PrefabInstance: {fileID: 754163760}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1978721314 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4001965367284287910, guid: 85be9d61575192343bf4503dca5114f0, type: 3}
-  m_PrefabInstance: {fileID: 5953750864400067586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1979098167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56195,10 +56190,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1304571340}
-    - target: {fileID: 4001965367284287910, guid: 85be9d61575192343bf4503dca5114f0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4874094363998347627, guid: 85be9d61575192343bf4503dca5114f0, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -56283,10 +56274,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6905938579863922624, guid: 85be9d61575192343bf4503dca5114f0, type: 3}
-      propertyPath: textCounterAnimator
-      value: 
-      objectReference: {fileID: 1978721314}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

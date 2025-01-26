@@ -9,6 +9,7 @@ namespace Utility
         public static readonly CameraEvents CameraEvent = new CameraEvents();
         public static readonly MoneyEvents MoneyEvent = new MoneyEvents();
         public static readonly GameProgressEvents GameProgressEvent = new GameProgressEvents();
+        public static readonly NotificationEvents NotificationEvent = new NotificationEvents();
 
 
         public class SelectableObjectEvents
@@ -43,5 +44,10 @@ namespace Utility
             public UnityAction<Component> OnStage3;
         }
         
+        
+        public class NotificationEvents
+        {
+            public UnityAction<Component> OnWrongSpawnPoint;
+        }
     }
 }

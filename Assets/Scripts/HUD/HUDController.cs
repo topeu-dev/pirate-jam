@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using Utility;
 
 namespace HUD
@@ -11,6 +13,8 @@ namespace HUD
 
         public TextMeshProUGUI moneyCounter;
         public TextMeshProUGUI citizenCounter;
+        
+        public TextMeshProUGUI notificationText;
 
 
         private void OnEnable()
@@ -19,7 +23,29 @@ namespace HUD
             EventManager.MoneyEvent.OnPurchase += OnPurchase;
             EventManager.GameProgressEvent.OnEnchant += DecreaseCitizenLeftCounter;
             EventManager.GameProgressEvent.OnStartGame += SaveInitialCitizenCount;
+            EventManager.NotificationEvent.OnWrongSpawnPoint += ShowWrongSpawnNotification;
         }
+
+        private void ShowWrongSpawnNotification(Component source)
+        {
+            notificationText.alpha = 1f;
+            notificationText.text = "Sir, I can't spawn there.";
+            StartCoroutine(LerpNotificationAlpha());
+        }
+
+        private IEnumerator LerpNotificationAlpha()
+        {
+            float elapsedTime = 0f;
+
+            while (elapsedTime < 2f)
+            {
+                elapsedTime += Time.deltaTime;
+                notificationText.alpha = Mathf.Lerp(1,
+                    0, elapsedTime / 2f);
+                yield return null;
+            }
+        }
+
 
         private void OnDisable()
         {

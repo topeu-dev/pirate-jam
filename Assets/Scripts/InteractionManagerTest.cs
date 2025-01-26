@@ -2,6 +2,7 @@ using Money;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Utility;
 using Visualizer;
 
 public class InteractionManagerTest : MonoBehaviour
@@ -53,8 +54,15 @@ public class InteractionManagerTest : MonoBehaviour
                 return;
             case 1:
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit, 200f, LayerMask.GetMask("Field")))
+                if (Physics.Raycast(ray, out RaycastHit hit, 200f, LayerMask.GetMask("Field",
+                        "Obstacle")))
                 {
+                    
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+                    {
+                        EventManager.NotificationEvent.OnWrongSpawnPoint?.Invoke(this);
+                        return;
+                    }
                     if (walletController.HasEnoughMoney(5))
                     {
                         walletController.Buy(5);
