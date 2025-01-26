@@ -12,6 +12,7 @@ public class CitizenController : MonoBehaviour
 
     private Animator animator;
     public GameObject canvasik;
+    public GameObject eyesVfx;
 
     // public Role role;
     public List<Transform> waypoints;
@@ -53,6 +54,7 @@ public class CitizenController : MonoBehaviour
                 ConvertedSoul = true;
                 animator.SetBool("isConverted", true);
                 canvasik.SetActive(true);
+                eyesVfx.SetActive(true);
                 EventManager.GameProgressEvent.OnEnchant?.Invoke(this);
                 StopEnchanting();
             }
