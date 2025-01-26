@@ -11,6 +11,7 @@ public class CitizenController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
 
     private Animator animator;
+    public GameObject canvasik;
 
     // public Role role;
     public List<Transform> waypoints;
@@ -51,6 +52,7 @@ public class CitizenController : MonoBehaviour
                 Debug.Log("Enchanted soul");
                 ConvertedSoul = true;
                 animator.SetBool("isConverted", true);
+                canvasik.SetActive(true);
                 EventManager.GameProgressEvent.OnEnchant?.Invoke(this);
                 StopEnchanting();
             }
