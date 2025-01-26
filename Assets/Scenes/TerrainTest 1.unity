@@ -322,7 +322,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2106440488}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &6221841 stripped
 Transform:
@@ -472,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
       propertyPath: m_TagString
@@ -481,7 +484,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124192401}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &8425447 stripped
 Transform:
@@ -1314,7 +1320,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 388715176}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &42467780 stripped
 Transform:
@@ -1452,6 +1461,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
+--- !u!1 &54933584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1781335280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &54942954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2198,7 +2212,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1477237287}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &78662761 stripped
 Transform:
@@ -4098,6 +4115,26 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1489009701}
   m_SourcePrefab: {fileID: 100100000, guid: a43f0d6131f84de40b182eb70bb23b87, type: 3}
+--- !u!1 &124192400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 8425446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &124192401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124192400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1 &124199911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,7 +5808,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 532302764}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &185768279 stripped
 Transform:
@@ -8529,7 +8569,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1891382828}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &285163575 stripped
 Transform:
@@ -9430,6 +9473,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.162697, y: 6.0000024, z: 4.66307}
   m_Center: {x: 0.0026228111, y: 0.0004745186, z: 2.3315346}
+--- !u!1 &310898098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1382751627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &312233708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10857,6 +10905,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
+--- !u!1 &388715175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 42467779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &388715176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388715175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &390148606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11120,6 +11188,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2011544527564852023, guid: 83eb0d2a5c1aae84db02c31695e1541b, type: 3}
   m_PrefabInstance: {fileID: 571145732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &400990280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1267933813}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &403192544 stripped
 Transform:
@@ -11500,7 +11573,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069965294}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &409588266 stripped
 Transform:
@@ -13902,7 +13978,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 799278330}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &503816455 stripped
 Transform:
@@ -14445,6 +14524,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
+--- !u!1 &532302763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 185768278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &532302764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532302763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &533347245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
@@ -14864,6 +14963,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1950415836}
   m_SourcePrefab: {fileID: 100100000, guid: 520e20395d1150a4c94174228bde0499, type: 3}
+--- !u!1 &549985539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1681329172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &550310485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c73c37430c8ac1e43831ddacfa77c180, type: 3}
@@ -15194,7 +15298,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1541774395}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &565490993 stripped
 Transform:
@@ -16245,7 +16352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1510736564}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &592383756 stripped
 Transform:
@@ -16330,6 +16440,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3832cb469e9c2ee47af1a2d52e4c5efe, type: 3}
   m_PrefabInstance: {fileID: 781321385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &595002794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 686411785}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &600592602 stripped
 Transform:
@@ -17582,7 +17697,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1690031205}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &653500233 stripped
 Transform:
@@ -23280,13 +23398,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 686411787}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &686411786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 686411785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686411787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595002794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &687153339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9c40cd488e7d8fc419ed5b2e20b0ef6f, type: 3}
@@ -23372,7 +23508,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1935048119}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &690466720 stripped
 Transform:
@@ -24520,6 +24659,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
   m_PrefabInstance: {fileID: 32169428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &716062245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1115662229}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &717985335
 PrefabInstance:
@@ -26572,6 +26716,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
   m_PrefabInstance: {fileID: 777512381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &799278329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 503816454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &799278330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799278329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1 &804584543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0c6eb60ad59a81145839dbc6dedcbc3f, type: 3}
@@ -28045,6 +28209,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
   m_PrefabInstance: {fileID: 235603221}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &898752239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1656730030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &898925019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2011544527564852023, guid: 83eb0d2a5c1aae84db02c31695e1541b, type: 3}
@@ -28832,6 +29001,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de03c1157800fcd49969fe287bc4fcd9, type: 3}
+--- !u!1 &939772466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 947853568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &941601427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28986,7 +29160,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2144621424}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &942617544 stripped
 Transform:
@@ -29183,13 +29360,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947853570}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &947853569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 947853568}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &947853570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939772466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &948028938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29392,6 +29587,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.162696, y: 6.0000014, z: 4.6630692}
   m_Center: {x: 0.0026191748, y: 0.00047420032, z: 2.3315344}
+--- !u!1 &952521192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1219084405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &953655909
 GameObject:
   m_ObjectHideFlags: 0
@@ -31499,7 +31699,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1090592996}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1065379585 stripped
 Transform:
@@ -31949,6 +32152,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1822621278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1090592995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1065379584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1090592996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090592995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1095138884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32792,13 +33015,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1115662231}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1115662230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1115662229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1115662231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716062245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1116764399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
@@ -35402,13 +35643,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219084407}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1219084406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1219084405}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1219084407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952521192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1221025761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35656,7 +35915,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699427558}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1223846982 stripped
 Transform:
@@ -36973,13 +37235,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267933815}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1267933814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1267933813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1267933815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400990280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1268074800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37995,6 +38275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   demonAoePrefab: {fileID: 9061996538976154586, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
   walletController: {fileID: 1344364670}
+  enchanterVisualizer: {fileID: 0}
 --- !u!4 &1304571341
 Transform:
   m_ObjectHideFlags: 0
@@ -39709,13 +39990,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1382751629}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1382751628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1382751627}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1382751629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310898098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1384916144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
@@ -40184,7 +40483,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062526550}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1413404777 stripped
 Transform:
@@ -41952,6 +42254,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2011544527564852023, guid: 83eb0d2a5c1aae84db02c31695e1541b, type: 3}
   m_PrefabInstance: {fileID: 1170541548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1477237286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 78662760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1477237287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477237286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1481663450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42480,6 +42802,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfbe3b150f82e0f4c9e2dcecf1436722, type: 3}
+--- !u!1 &1510736563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 592383755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1510736564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510736563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1512095663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43473,7 +43815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
       propertyPath: m_TagString
@@ -43482,7 +43824,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939387604}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1540054008 stripped
 Transform:
@@ -43565,6 +43910,26 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 32050077}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
+--- !u!1 &1541774394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 565490992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1541774395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541774394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1541844221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45297,6 +45662,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1613396691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1980527003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1614596436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46093,13 +46463,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1656730032}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1656730031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1656730030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1656730032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898752239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1658834196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3832cb469e9c2ee47af1a2d52e4c5efe, type: 3}
@@ -46600,13 +46988,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1681329174}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1681329173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1681329172}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681329174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549985539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1682900069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46886,6 +47292,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989109e5f4e858e478df26474421adf6, type: 3}
+--- !u!1 &1690031204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 653500232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1690031205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690031204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1691615963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46897,6 +47323,10 @@ PrefabInstance:
     - target: {fileID: 402179593074955004, guid: d53ad7ccbdf757c47b31415400e06c26, type: 3}
       propertyPath: m_Name
       value: Inquisitor_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097225765138193153, guid: d53ad7ccbdf757c47b31415400e06c26, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1600288565730762117, guid: d53ad7ccbdf757c47b31415400e06c26, type: 3}
       propertyPath: m_Range
@@ -47061,6 +47491,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
   m_PrefabInstance: {fileID: 1695435784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1699427557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1223846981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1699427558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699427557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1 &1701622872
 GameObject:
   m_ObjectHideFlags: 0
@@ -49252,13 +49702,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1781335282}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1781335281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1781335280}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1781335282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54933584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1782115508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 358849693681803955, guid: de03c1157800fcd49969fe287bc4fcd9, type: 3}
@@ -52223,6 +52691,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
   m_PrefabInstance: {fileID: 375463049}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1891382827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 285163574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1891382828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891382827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1895466082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8001191736281198579, guid: f88e803a82a135741ada0de772bb7686, type: 3}
@@ -53464,11 +53952,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
+--- !u!1 &1935048118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 690466719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1935048119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935048118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &1938713952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
   m_PrefabInstance: {fileID: 1162672098}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1939387603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1540054007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1939387604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939387603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1940121855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54533,13 +55061,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980527005}
   m_SourcePrefab: {fileID: 100100000, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
 --- !u!4 &1980527004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978225216177130351, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
   m_PrefabInstance: {fileID: 1980527003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980527005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613396691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &1982163994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56681,6 +57227,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.688842, y: 4.6082144, z: 10.257635}
   m_Center: {x: -0.004827382, y: 0.03451491, z: 3.3986425}
+--- !u!1 &2062526549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 1413404776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062526550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062526549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &2066596836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8456087579721233794, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
@@ -56759,6 +57325,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3312162e22d94b48b76cdb244148643, type: 3}
+--- !u!1 &2069965293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 409588265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2069965294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069965293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1 &2072482222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c73c37430c8ac1e43831ddacfa77c180, type: 3}
@@ -57866,6 +58452,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87a00fe8b559a1428f45b569c1f0e99, type: 3}
+--- !u!1 &2106440487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 6221840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106440488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106440487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!4 &2109056903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
@@ -59135,6 +59741,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6dc5d495c37d65043b022964d98631b9, type: 3}
   m_PrefabInstance: {fileID: 2144208194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2144621423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177904831596614497, guid: 15d6d6b14fed6d54abf8e3b995bb6410, type: 3}
+  m_PrefabInstance: {fileID: 942617543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2144621424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144621423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7330f4ca18744ee4be26df3203fc060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  isEnchanting: 0
+  timeToEnchanted: 5
 --- !u!1001 &2146138613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59601,63 +60227,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}
---- !u!1001 &5027768163700352213
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -19.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 110373120606033196, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9061996538976154586, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-      propertyPath: m_Name
-      value: DemonAoeTestInstance
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
 --- !u!1001 &9134758757384980371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59728,7 +60297,6 @@ SceneRoots:
   - {fileID: 2030321396}
   - {fileID: 953655914}
   - {fileID: 1822621278}
-  - {fileID: 5027768163700352213}
   - {fileID: 798049616}
   - {fileID: 2042277609}
   - {fileID: 541557136}
