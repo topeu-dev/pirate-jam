@@ -42,7 +42,7 @@ public class DemonAoeTest : MonoBehaviour
 
     private void Update()
     {
-        DrawCircle();
+        // DrawCircle();
     }
 
     private void OnDestroy()

@@ -37,6 +37,10 @@ namespace Utility
             
             // source 
             public UnityAction<Component> OnEnchant;
+            
+            public UnityAction<Component> OnStage2;
+            
+            public UnityAction<Component> OnStage3;
         }
         
     }
