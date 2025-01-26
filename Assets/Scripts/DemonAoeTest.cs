@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,9 +6,15 @@ public class DemonAoeTest : MonoBehaviour
 {
     public float aoe = 4f;
     public float timeToLive = 10f;
+    public GameObject deathVFX;
+    public float timeToFade = 2f;
+    public GameObject demonModel;
 
+    private List<Material> _materialsToFade = new();
+    private List<Color> _materialsToFadeColors = new();
     private bool _isChased;
     private readonly List<CitizenController> _enchantedCitizens = new();
+    private Animator _animator;
 
     private LineRenderer _lineRenderer;
 
@@ -15,7 +22,19 @@ public class DemonAoeTest : MonoBehaviour
 
     private void Awake()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
+        var allRenderers = demonModel.GetComponentsInChildren<Renderer>();
+        for (var i = 0; i < allRenderers.Length; i++)
+        {
+            var mat = allRenderers[i].material;
+            if (mat.HasProperty("_Color"))
+            {
+                _materialsToFade.Add(mat);
+                _materialsToFadeColors.Add(mat.color);
+            }
+        }
+
+        _animator = GetComponentInChildren<Animator>();
+        _lineRenderer = GetComponentInChildren<LineRenderer>();
         _sphereCollider = GetComponent<SphereCollider>();
         _sphereCollider.radius = aoe;
         Destroy(gameObject, timeToLive);
@@ -57,8 +76,38 @@ public class DemonAoeTest : MonoBehaviour
         _enchantedCitizens.Add(citizen);
     }
 
-    public bool IsChased()
+    public void Death()
     {
-        return _isChased;
+        _animator.speed = 0f;
+        EnableDeathVFX();
+    }
+
+    private IEnumerator FadeOutCoroutine()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < timeToFade)
+        {
+            elapsedTime += Time.deltaTime;
+            for (var i = 0; i < _materialsToFade.Count; i++)
+            {
+                float alpha = Mathf.Lerp(1f, 0f, elapsedTime / timeToFade);
+                _materialsToFade[i].color = new Color(
+                    _materialsToFadeColors[i].r,
+                    _materialsToFadeColors[i].g,
+                    _materialsToFadeColors[i].b,
+                    alpha
+                );
+            }
+
+            yield return null;
+        }
+    }
+
+    private void EnableDeathVFX()
+    {
+        StartCoroutine(FadeOutCoroutine());
+        deathVFX.SetActive(true);
+        Destroy(gameObject, 2.5f);
     }
 }

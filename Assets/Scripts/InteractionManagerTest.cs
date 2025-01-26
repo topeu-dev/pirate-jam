@@ -2,11 +2,15 @@ using Money;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Visualizer;
 
 public class InteractionManagerTest : MonoBehaviour
 {
     public GameObject demonAoePrefab;
     public WalletController walletController;
+
+
+    public EnchanterVisualizer enchanterVisualizer;
 
     private Camera _mainCamera;
 
@@ -54,7 +58,18 @@ public class InteractionManagerTest : MonoBehaviour
                     if (walletController.HasEnoughMoney(5))
                     {
                         walletController.Buy(5);
-                        Instantiate(demonAoePrefab, hit.point, Quaternion.Euler(90f, 0f, 0f));
+
+                        var closestCitizen = FindClosestWithTag(hit.point, 15f, "Citizen");
+
+                        if (closestCitizen)
+                        {
+                            Instantiate(demonAoePrefab, hit.point,
+                                Quaternion.LookRotation(hit.point - closestCitizen.transform.position));
+                        }
+                        else
+                        {
+                            Instantiate(demonAoePrefab, hit.point, Quaternion.identity);
+                        }
                     }
 
                     ResetSpellId();
@@ -72,10 +87,38 @@ public class InteractionManagerTest : MonoBehaviour
     public void SelectAction(int actionId)
     {
         _selectedAction = actionId;
+        if (_selectedAction == 1)
+        {
+            enchanterVisualizer.EnableVisualizer();
+        }
     }
 
     private void ResetSpellId()
     {
         _selectedAction = 0;
+        enchanterVisualizer.DisableVisualizer();
+    }
+
+
+    GameObject FindClosestWithTag(Vector3 center, float radius, string tag)
+    {
+        Collider[] colliders = Physics.OverlapSphere(center, radius); // Все объекты в радиусе
+        GameObject closestObject = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag(tag)) // Проверяем, соответствует ли объект нужному тегу
+            {
+                float distance = Vector3.Distance(center, collider.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestObject = collider.gameObject;
+                }
+            }
+        }
+
+        return closestObject;
     }
 }

@@ -18,6 +18,7 @@ public class CitizenController : MonoBehaviour
     public bool isEnchanting = false;
     private float enchantedTime = 0f;
     public float timeToEnchanted = 5f;
+    int count = 0;
 
     public bool ConvertedSoul { get; set; } = false;
 
@@ -38,7 +39,7 @@ public class CitizenController : MonoBehaviour
         transform.position = animatorRootPos;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
 
@@ -57,8 +58,16 @@ public class CitizenController : MonoBehaviour
 
         if (!isEnchanting && (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f))
         {
-            Debug.Log("new path");
-            navMeshAgent.destination = waypoints[Random.Range(0, waypoints.Count)].position;
+            if (Vector3.Distance(transform.position,navMeshAgent.destination) <= navMeshAgent.stoppingDistance)
+            {                
+                Debug.Log("new path");
+                count++;
+                if (count >= waypoints.Count)
+                {
+                    count = 0;
+                }
+                navMeshAgent.destination = waypoints[count].position;
+            }
         }
     }
 
