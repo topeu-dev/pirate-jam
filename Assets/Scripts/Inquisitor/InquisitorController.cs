@@ -63,7 +63,9 @@ namespace Inquisitor
 
         public void KillDemon()
         {
-            Destroy(enemyToChase);
+            // Destroy(enemyToChase);
+            var demonController = enemyToChase.GetComponent<DemonAoeTest>();
+            demonController.Death();
             enemyToChase = null;
         }
 
