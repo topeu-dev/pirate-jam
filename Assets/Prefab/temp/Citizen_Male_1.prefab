@@ -15001,6 +15001,7 @@ Transform:
   m_Children:
   - {fileID: 115724814272344113}
   - {fileID: 3790252186252632868}
+  - {fileID: 8642483021329746198}
   m_Father: {fileID: 3490434198167622562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4872105007688452472
@@ -28739,7 +28740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6495552584365592723
 Transform:
   m_ObjectHideFlags: 0
@@ -29045,7 +29046,7 @@ GameObject:
   - component: {fileID: 3038349620311714329}
   m_Layer: 0
   m_Name: Citizen_Male_1
-  m_TagString: Untagged
+  m_TagString: Citizen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29281,8 +29282,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasik: {fileID: 7236485217525894691}
+  enchantVfx: {fileID: 5375553660581591884}
   eyesVfx: {fileID: 7656366596914355868}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
   isEnchanting: 0
   timeToEnchanted: 3
 --- !u!195 &8523848061707953169
@@ -29570,4 +29574,75 @@ RectTransform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6021015230782200017, guid: a2700aca9cae54b45bf1983a6e993dac, type: 3}
   m_PrefabInstance: {fileID: 4027301658613667570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7375624884281905890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1567240030910926999}
+    m_Modifications:
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.159
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.007852407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.019282745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.997435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.06848392
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_Name
+      value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+--- !u!1 &5375553660581591884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+  m_PrefabInstance: {fileID: 7375624884281905890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8642483021329746198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1273180888327511028, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+  m_PrefabInstance: {fileID: 7375624884281905890}
   m_PrefabAsset: {fileID: 0}

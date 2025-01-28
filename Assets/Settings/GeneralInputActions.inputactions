@@ -123,6 +123,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "e94fda79-4122-4254-bfa2-0d6e483073be",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7315afdf-3165-4360-8de8-2bb1da06a923",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "0e9ec7e6-af1a-44d3-bba3-68d49c6c6900",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "fb8d4f8d-2272-4419-b596-3e8361b86b24",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f5e30e73-a309-47f3-9ac2-f7a9b5fcd52d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "1D Axis",
                     "id": "e5d15e25-db78-4ee8-80eb-370f76d7345f",
                     "path": "1DAxis",
@@ -148,6 +203,39 @@
                     "name": "positive",
                     "id": "4086761b-1472-49cf-b49d-e71aaeb22b8e",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "6c02be97-9b5c-40f9-902f-c3ff1c93ea77",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraRotation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c6c70982-6088-4045-b69b-72dcf18e583b",
+                    "path": "<Keyboard>/pageUp",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1f17a8d7-3a3a-4328-a2df-22b3c2452002",
+                    "path": "<Keyboard>/pageDown",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -189,7 +277,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PressAlt",
+                    "name": "ShowFov",
                     "type": "Button",
                     "id": "6b3cb0f2-3f58-43df-b1a5-26fc378f1bbd",
                     "expectedControlType": "",
@@ -235,11 +323,11 @@
                 {
                     "name": "",
                     "id": "d7e0384d-821e-4e51-853d-9fe87b47c1ea",
-                    "path": "<Keyboard>/alt",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PressAlt",
+                    "action": "ShowFov",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

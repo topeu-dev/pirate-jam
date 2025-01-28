@@ -1,10 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 using Utility;
-using Random = UnityEngine.Random;
 
 public class CitizenController : MonoBehaviour
 {
@@ -12,9 +9,9 @@ public class CitizenController : MonoBehaviour
 
     private Animator animator;
     public GameObject canvasik;
+    public GameObject enchantVfx;
     public GameObject eyesVfx;
 
-    // public Role role;
     public List<Transform> waypoints;
 
     public bool isEnchanting = false;
@@ -47,6 +44,7 @@ public class CitizenController : MonoBehaviour
 
         if (isEnchanting && !ConvertedSoul)
         {
+            enchantVfx.SetActive(true);
             enchantedTime += Time.deltaTime;
             if (enchantedTime >= timeToEnchanted)
             {
@@ -62,14 +60,15 @@ public class CitizenController : MonoBehaviour
 
         if (!isEnchanting && (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f))
         {
-            if (Vector3.Distance(transform.position,navMeshAgent.destination) <= navMeshAgent.stoppingDistance)
-            {                
+            if (Vector3.Distance(transform.position, navMeshAgent.destination) <= navMeshAgent.stoppingDistance)
+            {
                 Debug.Log("new path");
                 count++;
                 if (count >= waypoints.Count)
                 {
                     count = 0;
                 }
+
                 navMeshAgent.destination = waypoints[count].position;
             }
         }
@@ -94,8 +93,12 @@ public class CitizenController : MonoBehaviour
         navMeshAgent.isStopped = false;
         isEnchanting = false;
         enchantedTime = 0f;
+        if (!ConvertedSoul)
+        {
+            enchantVfx.SetActive(false);
+        }
     }
-    
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

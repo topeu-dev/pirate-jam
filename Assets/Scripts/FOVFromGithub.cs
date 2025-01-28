@@ -39,22 +39,17 @@ public class FieldOfView : MonoBehaviour
         viewMeshFilter.mesh = viewMesh;
     }
 
-    void Start()
-    {
-        // StartCoroutine("FindTargetsWithDelay", .05f);
-    }
-
     private void OnEnable()
     {
         InputActionSingleton.GeneralInputActions.Gameplay.Enable();
-        InputActionSingleton.GeneralInputActions.Gameplay.PressAlt.performed += EnableFov;
-        InputActionSingleton.GeneralInputActions.Gameplay.PressAlt.canceled += DisableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed += EnableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled += DisableFov;
     }
 
     private void OnDisable()
     {
-        InputActionSingleton.GeneralInputActions.Gameplay.PressAlt.performed -= EnableFov;
-        InputActionSingleton.GeneralInputActions.Gameplay.PressAlt.canceled -= DisableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed -= EnableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled -= DisableFov;
     }
 
     private void DisableFov(InputAction.CallbackContext obj)

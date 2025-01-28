@@ -145,6 +145,61 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""e94fda79-4122-4254-bfa2-0d6e483073be"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7315afdf-3165-4360-8de8-2bb1da06a923"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0e9ec7e6-af1a-44d3-bba3-68d49c6c6900"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""fb8d4f8d-2272-4419-b596-3e8361b86b24"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""f5e30e73-a309-47f3-9ac2-f7a9b5fcd52d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""1D Axis"",
                     ""id"": ""e5d15e25-db78-4ee8-80eb-370f76d7345f"",
                     ""path"": ""1DAxis"",
@@ -170,6 +225,39 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
                     ""name"": ""positive"",
                     ""id"": ""4086761b-1472-49cf-b49d-e71aaeb22b8e"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraRotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""6c02be97-9b5c-40f9-902f-c3ff1c93ea77"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraRotation"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c6c70982-6088-4045-b69b-72dcf18e583b"",
+                    ""path"": ""<Keyboard>/pageUp"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraRotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1f17a8d7-3a3a-4328-a2df-22b3c2452002"",
+                    ""path"": ""<Keyboard>/pageDown"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -211,7 +299,7 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""PressAlt"",
+                    ""name"": ""ShowFov"",
                     ""type"": ""Button"",
                     ""id"": ""6b3cb0f2-3f58-43df-b1a5-26fc378f1bbd"",
                     ""expectedControlType"": """",
@@ -257,11 +345,11 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d7e0384d-821e-4e51-853d-9fe87b47c1ea"",
-                    ""path"": ""<Keyboard>/alt"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PressAlt"",
+                    ""action"": ""ShowFov"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -372,7 +460,7 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
         m_Gameplay_Click = m_Gameplay.FindAction("Click", throwIfNotFound: true);
         m_Gameplay_PressBack = m_Gameplay.FindAction("PressBack", throwIfNotFound: true);
         m_Gameplay_RightClick = m_Gameplay.FindAction("RightClick", throwIfNotFound: true);
-        m_Gameplay_PressAlt = m_Gameplay.FindAction("PressAlt", throwIfNotFound: true);
+        m_Gameplay_ShowFov = m_Gameplay.FindAction("ShowFov", throwIfNotFound: true);
         // MainMenu
         m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
         m_MainMenu_Navigate = m_MainMenu.FindAction("Navigate", throwIfNotFound: true);
@@ -510,7 +598,7 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Click;
     private readonly InputAction m_Gameplay_PressBack;
     private readonly InputAction m_Gameplay_RightClick;
-    private readonly InputAction m_Gameplay_PressAlt;
+    private readonly InputAction m_Gameplay_ShowFov;
     public struct GameplayActions
     {
         private @GeneralInputActions m_Wrapper;
@@ -518,7 +606,7 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
         public InputAction @Click => m_Wrapper.m_Gameplay_Click;
         public InputAction @PressBack => m_Wrapper.m_Gameplay_PressBack;
         public InputAction @RightClick => m_Wrapper.m_Gameplay_RightClick;
-        public InputAction @PressAlt => m_Wrapper.m_Gameplay_PressAlt;
+        public InputAction @ShowFov => m_Wrapper.m_Gameplay_ShowFov;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -537,9 +625,9 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
             @RightClick.started += instance.OnRightClick;
             @RightClick.performed += instance.OnRightClick;
             @RightClick.canceled += instance.OnRightClick;
-            @PressAlt.started += instance.OnPressAlt;
-            @PressAlt.performed += instance.OnPressAlt;
-            @PressAlt.canceled += instance.OnPressAlt;
+            @ShowFov.started += instance.OnShowFov;
+            @ShowFov.performed += instance.OnShowFov;
+            @ShowFov.canceled += instance.OnShowFov;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -553,9 +641,9 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
             @RightClick.started -= instance.OnRightClick;
             @RightClick.performed -= instance.OnRightClick;
             @RightClick.canceled -= instance.OnRightClick;
-            @PressAlt.started -= instance.OnPressAlt;
-            @PressAlt.performed -= instance.OnPressAlt;
-            @PressAlt.canceled -= instance.OnPressAlt;
+            @ShowFov.started -= instance.OnShowFov;
+            @ShowFov.performed -= instance.OnShowFov;
+            @ShowFov.canceled -= instance.OnShowFov;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -638,7 +726,7 @@ public partial class @GeneralInputActions: IInputActionCollection2, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnPressBack(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
-        void OnPressAlt(InputAction.CallbackContext context);
+        void OnShowFov(InputAction.CallbackContext context);
     }
     public interface IMainMenuActions
     {

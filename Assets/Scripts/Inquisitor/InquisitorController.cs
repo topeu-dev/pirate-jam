@@ -19,10 +19,13 @@ namespace Inquisitor
         internal InqLookAroundState LookAroundState = new InqLookAroundState();
         internal InqKillingDemonState KillingDemonState = new InqKillingDemonState();
         internal InqChaseState ChaseState = new InqChaseState();
+        internal InqRunToHelpState RunToHelpState = new InqRunToHelpState();
 
         internal GameObject enemyToChase;
         // internal DemonAoeTest enemyToChase;
         public List<Transform> waypoints;
+        
+        public Transform runToHelpPoint;
 
         private void Awake()
         {
@@ -43,8 +46,16 @@ namespace Inquisitor
 
         void Start()
         {
-            _currentState = PatrolState;
-            _currentState.EnterState(this);
+            if (runToHelpPoint)
+            {
+                _currentState = RunToHelpState;
+                _currentState.EnterState(this); 
+            }
+            else
+            {
+                _currentState = PatrolState;
+                _currentState.EnterState(this); 
+            }
 
             _navMeshAgent = GetComponent<NavMeshAgent>();
         }
