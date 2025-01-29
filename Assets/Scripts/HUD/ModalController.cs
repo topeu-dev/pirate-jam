@@ -28,6 +28,7 @@ namespace HUD
         private void OnEnable()
         {
             modalCounter.text = "1/" + modals.Length;
+            _currentModalIndex = 0;
             SetOneActiveModal(0);
             SetIndexToCounter(0);
         }
