@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Inquisitor.State;
 using UnityEngine;
 using UnityEngine.AI;
+using Utility;
 
 namespace Inquisitor
 {
@@ -22,9 +23,10 @@ namespace Inquisitor
         internal InqRunToHelpState RunToHelpState = new InqRunToHelpState();
 
         internal GameObject enemyToChase;
+
         // internal DemonAoeTest enemyToChase;
         public List<Transform> waypoints;
-        
+
         public Transform runToHelpPoint;
 
         private void Awake()
@@ -49,12 +51,12 @@ namespace Inquisitor
             if (runToHelpPoint)
             {
                 _currentState = RunToHelpState;
-                _currentState.EnterState(this); 
+                _currentState.EnterState(this);
             }
             else
             {
                 _currentState = PatrolState;
-                _currentState.EnterState(this); 
+                _currentState.EnterState(this);
             }
 
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -74,10 +76,10 @@ namespace Inquisitor
 
         public void KillDemon()
         {
-            // Destroy(enemyToChase);
             var demonController = enemyToChase.GetComponent<DemonAoeTest>();
             demonController.Death();
             enemyToChase = null;
+            EventManager.DemonChargeEvent.OnDemonKilledByInqEvent?.Invoke(this);
         }
 
         public void setTargetToChase(GameObject targetToChase)
