@@ -16,6 +16,7 @@ public class StageEffectController : MonoBehaviour
     public GameObject inquisitorsFor2ndStage;
     public GameObject inquisitorToFocusOn3rdStage;
     public GameObject inquisitorsFor3rdStage;
+    public AudioSource audioSourceToPlayOnStageChange;
     public float timeToFocus;
 
     private ShadowsMidtonesHighlights smh;
@@ -60,6 +61,7 @@ public class StageEffectController : MonoBehaviour
             inquisitorToFocusOn2nStage,
             timeToFocus
         ));
+        audioSourceToPlayOnStageChange.Play();
         StartCoroutine(LerpParams(
                 new Vector4(1f, 0.88f, 0.95f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),
@@ -75,6 +77,7 @@ public class StageEffectController : MonoBehaviour
             inquisitorToFocusOn2nStage,
             timeToFocus
         ));
+        audioSourceToPlayOnStageChange.Play();
         StartCoroutine(LerpParams(
                 new Vector4(1f, 0.80f, 0.95f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),

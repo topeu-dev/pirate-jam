@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DemonAoeTest : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class DemonAoeTest : MonoBehaviour
     public GameObject deathVFX;
     public float timeToFade = 2f;
     public GameObject demonModel;
+    public TextMeshProUGUI timeToLiveCounterText;
 
     private List<Material> _materialsToFade = new();
     private List<Color> _materialsToFadeColors = new();
@@ -19,6 +23,8 @@ public class DemonAoeTest : MonoBehaviour
     private LineRenderer _lineRenderer;
 
     private SphereCollider _sphereCollider;
+
+    private float _timeToLiveCounter;
 
     private void Awake()
     {
@@ -37,12 +43,27 @@ public class DemonAoeTest : MonoBehaviour
         _lineRenderer = GetComponentInChildren<LineRenderer>();
         _sphereCollider = GetComponent<SphereCollider>();
         _sphereCollider.radius = aoe;
+    }
+
+    private void Start()
+    {
+        _timeToLiveCounter = timeToLive;
         Destroy(gameObject, timeToLive);
     }
 
     private void Update()
     {
-        // DrawCircle();
+        _timeToLiveCounter -= Time.deltaTime;
+        var timeToLiveCounterAsInt = ((int)_timeToLiveCounter);
+        if (timeToLiveCounterAsInt >= 0)
+        {
+            timeToLiveCounterText.text = timeToLiveCounterAsInt.ToString(); 
+        }
+        else
+        {
+            timeToLiveCounterText.text = "";
+        }
+        
     }
 
     private void OnDestroy()

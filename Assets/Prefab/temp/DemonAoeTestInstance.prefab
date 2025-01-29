@@ -323,6 +323,7 @@ MonoBehaviour:
   deathVFX: {fileID: 3955095753157985335}
   timeToFade: 2
   demonModel: {fileID: 5144331602086230505}
+  timeToLiveCounterText: {fileID: 8589696857544103693}
 --- !u!135 &2246312906092802169
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -902,6 +903,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7407462454420833806, guid: a2478506349a4ad499e8f377744d323d, type: 3}
   m_PrefabInstance: {fileID: 3435452783774774608}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8589696857544103693 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6384298679199670877, guid: a2478506349a4ad499e8f377744d323d, type: 3}
+  m_PrefabInstance: {fileID: 3435452783774774608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6625750370957995836
 PrefabInstance:
   m_ObjectHideFlags: 0
