@@ -7,6 +7,8 @@ namespace Utility
     {
         public static readonly SelectableObjectEvents SelectableObject = new SelectableObjectEvents();
         public static readonly CameraEvents CameraEvent = new CameraEvents();
+        public static readonly InGameMenuEvents InGameMenuEvent = new InGameMenuEvents();
+        
         public static readonly MoneyEvents MoneyEvent = new MoneyEvents();
         public static readonly DemonChargesEvents DemonChargeEvent = new DemonChargesEvents();
         public static readonly GameProgressEvents GameProgressEvent = new GameProgressEvents();
@@ -22,6 +24,11 @@ namespace Utility
         {
             public UnityAction<Component, GameObject> OnPlayableCharacterFocusEvent;
         }
+        
+        public class InGameMenuEvents
+        {
+            public UnityAction<Component> OnPressBackEvent;
+        }
 
         public class MoneyEvents
         {
@@ -36,6 +43,7 @@ namespace Utility
         {
             // source - initial-demon-charge-count
             public UnityAction<Component, int > OnStartGame;
+            public UnityAction<Component, AudioSource[]> OnSummon;
             public UnityAction<Component> OnDemonKilledByInqEvent;
         }
 

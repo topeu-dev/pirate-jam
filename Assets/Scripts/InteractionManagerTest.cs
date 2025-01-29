@@ -27,6 +27,19 @@ public class InteractionManagerTest : MonoBehaviour
         InputActionSingleton.GeneralInputActions.Gameplay.Enable();
         InputActionSingleton.GeneralInputActions.Gameplay.Click.performed += OnClick;
         InputActionSingleton.GeneralInputActions.Gameplay.RightClick.performed += OnRightClick;
+        InputActionSingleton.GeneralInputActions.Gameplay.PressBack.performed += OnPressBack;
+    }
+
+    private void OnPressBack(InputAction.CallbackContext obj)
+    {
+        if (_selectedAction == 0)
+        {
+            EventManager.InGameMenuEvent.OnPressBackEvent?.Invoke(this);
+        }
+        else
+        {
+            ResetSpellId();
+        }
     }
 
     private void OnRightClick(InputAction.CallbackContext obj)
@@ -63,22 +76,21 @@ public class InteractionManagerTest : MonoBehaviour
                         EventManager.NotificationEvent.OnWrongSpawnPoint?.Invoke(this);
                         return;
                     }
-                    if (walletController.HasEnoughMoney(5))
+   
+                    walletController.Buy(5);
+
+                    var closestCitizen = FindClosestWithTag(hit.point, 15f, "Citizen");
+
+                    if (closestCitizen)
                     {
-                        walletController.Buy(5);
-
-                        var closestCitizen = FindClosestWithTag(hit.point, 15f, "Citizen");
-
-                        if (closestCitizen)
-                        {
-                            Instantiate(demonAoePrefab, hit.point,
-                                Quaternion.LookRotation(hit.point - closestCitizen.transform.position));
-                        }
-                        else
-                        {
-                            Instantiate(demonAoePrefab, hit.point, Quaternion.identity);
-                        }
+                        Instantiate(demonAoePrefab, hit.point,
+                            Quaternion.LookRotation(hit.point - closestCitizen.transform.position));
                     }
+                    else
+                    {
+                        Instantiate(demonAoePrefab, hit.point, Quaternion.identity);
+                    }
+                    
 
                     ResetSpellId();
                 }

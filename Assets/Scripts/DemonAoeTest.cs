@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utility;
 
 public class DemonAoeTest : MonoBehaviour
 {
@@ -43,6 +44,9 @@ public class DemonAoeTest : MonoBehaviour
         _lineRenderer = GetComponentInChildren<LineRenderer>();
         _sphereCollider = GetComponent<SphereCollider>();
         _sphereCollider.radius = aoe;
+        
+        
+        EventManager.DemonChargeEvent.OnSummon?.Invoke(this, GetComponents<AudioSource>());
     }
 
     private void Start()

@@ -1638,7 +1638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6285611906739018759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2354,7 +2354,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4066743809807319093
 MonoBehaviour:
@@ -3116,6 +3116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modals:
+  - {fileID: 3788370477201355086}
   - {fileID: 5536609095119403858}
   - {fileID: 2419333599573047104}
   modalCounter: {fileID: 8131610353397665101}
