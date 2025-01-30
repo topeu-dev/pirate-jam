@@ -73,8 +73,10 @@ public class StageEffectController : MonoBehaviour
 
     private void OnStage3(Component arg0)
     {
+        inquisitorsFor3rdStage.SetActive(true);
+        
         StartCoroutine(SwitchCameraForNSeconds(
-            inquisitorToFocusOn2nStage,
+            inquisitorToFocusOn3rdStage,
             timeToFocus
         ));
         audioSourceToPlayOnStageChange.Play();
