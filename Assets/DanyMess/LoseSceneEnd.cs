@@ -6,7 +6,7 @@ public class LoseSceneEnd : MonoBehaviour
 {
     
     // Публичная переменная для индекса сцены
-    public int sceneIndexRestart = 1;
+    public int sceneIndexRestart = 2;
     public int sceneIndexMenu = 0;
 
     

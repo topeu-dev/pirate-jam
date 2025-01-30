@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a5d77a184895c9f49b0d824309fbae7a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartQuote.unity
     guid: 044b5772d1c0a76478397cf51c8aaf6d
   - enabled: 1
     path: Assets/Scenes/TerrainTest.unity
     guid: 7a56296f1ed4ce7459fb3c336e87655d
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: ffcbf786ab723fb46be86f1ca63d32ec
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 21055ffe460c2734d86e37a4014902df
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 8254282dc51048d4d8d5a1f3acee6f24, type: 3}
   m_UseUCBPForAssetBundles: 0
