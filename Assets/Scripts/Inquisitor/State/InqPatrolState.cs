@@ -53,8 +53,8 @@ namespace Inquisitor.State
         {
             if (_waypoints.Length == 0)
                 return;
-            _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
             _navMeshAgentRef.SetDestination(_waypoints[_currentWaypointIndex].position);
+            _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
         }
     }
 }

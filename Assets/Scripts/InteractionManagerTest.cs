@@ -1,4 +1,3 @@
-using Money;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -8,7 +7,6 @@ using Visualizer;
 public class InteractionManagerTest : MonoBehaviour
 {
     public GameObject demonAoePrefab;
-    public WalletController walletController;
 
 
     public EnchanterVisualizer enchanterVisualizer;
@@ -70,14 +68,11 @@ public class InteractionManagerTest : MonoBehaviour
                 if (Physics.Raycast(ray, out RaycastHit hit, 200f, LayerMask.GetMask("Field",
                         "Obstacle")))
                 {
-                    
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
                     {
                         EventManager.NotificationEvent.OnWrongSpawnPoint?.Invoke(this);
                         return;
                     }
-   
-                    walletController.Buy(5);
 
                     var closestCitizen = FindClosestWithTag(hit.point, 15f, "Citizen");
 
@@ -90,7 +85,6 @@ public class InteractionManagerTest : MonoBehaviour
                     {
                         Instantiate(demonAoePrefab, hit.point, Quaternion.identity);
                     }
-                    
 
                     ResetSpellId();
                 }

@@ -252,7 +252,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 14
+    scalar: 11
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -5395,7 +5395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aoe: 4
-  timeToLive: 15
+  timeToLive: 12
   deathVFX: {fileID: 3955095753157985335}
   timeToFade: 2
   demonModel: {fileID: 5144331602086230505}
