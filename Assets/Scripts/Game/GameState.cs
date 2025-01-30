@@ -69,9 +69,8 @@ namespace Game
                 if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.33f)
                 {
                     EventManager.GameProgressEvent.OnStage2?.Invoke(this);
+                    _stage2Started = true;
                 }
-
-                _stage2Started = true;
             }
 
 
@@ -80,9 +79,8 @@ namespace Game
                 if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.66f)
                 {
                     EventManager.GameProgressEvent.OnStage3?.Invoke(this);
+                    _stage3Started = true;
                 }
-
-                _stage3Started = true;
             }
         }
 
