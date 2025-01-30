@@ -8170,6 +8170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7725082954800135172, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8298235104484649271, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -23581,7 +23585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   demonAoePrefab: {fileID: 9061996538976154586, guid: 4963087327f29c0429f0134c5d2f0545, type: 3}
-  walletController: {fileID: 0}
   enchanterVisualizer: {fileID: 0}
 --- !u!4 &1304571341
 Transform:
@@ -29185,6 +29188,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5711312963050384077, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725082954800135172, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8298235104484649271, guid: 4e7b6d9eb920b034f8e17387643154b1, type: 3}

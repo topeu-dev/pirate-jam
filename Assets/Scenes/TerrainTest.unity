@@ -8372,6 +8372,10 @@ PrefabInstance:
       propertyPath: timeToEnchanted
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6470966979033631069, guid: 890a6caaf40f6d242809b66fd679a44f, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9046385762586786849, guid: 890a6caaf40f6d242809b66fd679a44f, type: 3}
       propertyPath: m_Name
       value: Merchant2 (1)
@@ -8981,6 +8985,10 @@ PrefabInstance:
     - target: {fileID: 6470966979033631069, guid: 890a6caaf40f6d242809b66fd679a44f, type: 3}
       propertyPath: timeToEnchanted
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470966979033631069, guid: 890a6caaf40f6d242809b66fd679a44f, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9046385762586786849, guid: 890a6caaf40f6d242809b66fd679a44f, type: 3}
       propertyPath: m_Name
