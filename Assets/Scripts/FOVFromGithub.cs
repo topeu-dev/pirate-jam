@@ -28,7 +28,7 @@ public class FieldOfView : MonoBehaviour
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.enabled = false;
+        // meshRenderer.enabled = false;
 
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";

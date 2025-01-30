@@ -16311,6 +16311,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  runToHelpPoint: {fileID: 0}
 --- !u!1 &5132868572148671855
 GameObject:
   m_ObjectHideFlags: 0
@@ -24543,7 +24544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e701c6cf86354c4a92814e55cf40f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 35
+  viewRadius: 25
   viewAngle: 45
   targetMask:
     serializedVersion: 2

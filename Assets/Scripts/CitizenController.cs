@@ -12,7 +12,7 @@ public class CitizenController : MonoBehaviour
     public GameObject enchantVfx;
     public GameObject eyesVfx;
 
-    public List<Transform> waypoints;
+    public List<Transform> waypoints = new();
 
     public bool isEnchanting = false;
     private float enchantedTime = 0f;
@@ -58,6 +58,11 @@ public class CitizenController : MonoBehaviour
             }
         }
 
+        if (waypoints.Count == 0)
+        {
+            return;
+        }
+        
         if (!isEnchanting && (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f))
         {
             if (Vector3.Distance(transform.position, navMeshAgent.destination) <= navMeshAgent.stoppingDistance)

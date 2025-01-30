@@ -18,6 +18,9 @@ namespace Game
         public float timeToFadeIn = 3f;
         private Canvas _canvasForFadeIn;
 
+        private bool _stage2Started = false;
+        private bool _stage3Started = false;
+
 
         private void Awake()
         {
@@ -27,9 +30,14 @@ namespace Game
         private void Start()
         {
             var allCitizen = FindObjectsByType<CitizenController>(FindObjectsSortMode.None);
-            _initialCitizenCount = allCitizen.Length;
-            _citizenLeft = allCitizen.Length;
-            EventManager.GameProgressEvent.OnStartGame(this, allCitizen.Length);
+            
+            _initialCitizenCount = allCitizen.Length - 3;
+            if (_initialCitizenCount < 0)
+            {
+                _initialCitizenCount = 3;
+            }
+            _citizenLeft = _initialCitizenCount;
+            EventManager.GameProgressEvent.OnStartGame(this, _initialCitizenCount);
 
             _currentDemonCount = initialDemonCount;
             EventManager.DemonChargeEvent.OnStartGame?.Invoke(this, initialDemonCount);
@@ -56,14 +64,25 @@ namespace Game
                 StartCoroutine(FadeInAndLoadScene("WinScene"));
             }
 
-            if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.33f)
+            if (!_stage2Started)
             {
-                EventManager.GameProgressEvent.OnStage2?.Invoke(this);
+                if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.33f)
+                {
+                    EventManager.GameProgressEvent.OnStage2?.Invoke(this);
+                }
+
+                _stage2Started = true;
             }
 
-            if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.66f)
+
+            if (!_stage3Started)
             {
-                EventManager.GameProgressEvent.OnStage3?.Invoke(this);
+                if (1 - (float)_citizenLeft / _initialCitizenCount >= 0.66f)
+                {
+                    EventManager.GameProgressEvent.OnStage3?.Invoke(this);
+                }
+
+                _stage3Started = true;
             }
         }
 
