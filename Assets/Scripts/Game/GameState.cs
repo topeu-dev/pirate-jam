@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Utility;
@@ -11,6 +12,7 @@ namespace Game
         private int _citizenLeft;
         private int _initialCitizenCount;
 
+        public SceneState sceneState;
 
         public int initialDemonCount = 10;
         private int _currentDemonCount;
@@ -30,12 +32,13 @@ namespace Game
         private void Start()
         {
             var allCitizen = FindObjectsByType<CitizenController>(FindObjectsSortMode.None);
-            
+
             _initialCitizenCount = allCitizen.Length - 3;
             if (_initialCitizenCount < 0)
             {
                 _initialCitizenCount = 3;
             }
+
             _citizenLeft = _initialCitizenCount;
             EventManager.GameProgressEvent.OnStartGame(this, _initialCitizenCount);
 
@@ -47,12 +50,19 @@ namespace Game
         {
             EventManager.GameProgressEvent.OnEnchant += DecreaseCounter;
             EventManager.DemonChargeEvent.OnDemonKilledByInqEvent += DecreaseDemonCounter;
+            InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed += ToggleFovState;
+        }
+
+        private void ToggleFovState(InputAction.CallbackContext obj)
+        {
+            sceneState.isFovEnabled = !sceneState;
         }
 
         private void OnDisable()
         {
             EventManager.GameProgressEvent.OnEnchant -= DecreaseCounter;
             EventManager.DemonChargeEvent.OnDemonKilledByInqEvent -= DecreaseDemonCounter;
+            InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed -= ToggleFovState;
         }
 
 

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -9,7 +8,7 @@ using Utility;
 public class StageEffectController : MonoBehaviour
 {
     public Volume volume;
-    public float transitionTime = 2f;
+    public float transitionTime = 4f;
 
     public CinemachineCamera cameraForStages;
     public GameObject inquisitorToFocusOn2nStage;
@@ -21,6 +20,7 @@ public class StageEffectController : MonoBehaviour
 
     private ShadowsMidtonesHighlights smh;
     private ChromaticAberration chromaticAberration;
+    private ColorAdjustments colorAdjustments;
 
     private void Awake()
     {
@@ -38,6 +38,11 @@ public class StageEffectController : MonoBehaviour
         {
             Debug.LogError("Chromatic Aberration не добавлено в Volume Profile!");
         }
+        
+        if (!volume.profile.TryGet(out colorAdjustments))
+        {
+            Debug.LogError("Color adjustments не добавлено в Volume Profile!");
+        }
     }
 
     private void OnEnable()
@@ -54,9 +59,8 @@ public class StageEffectController : MonoBehaviour
 
     private void OnStage2(Component arg0)
     {
-
         inquisitorsFor2ndStage.SetActive(true);
-        
+
         StartCoroutine(SwitchCameraForNSeconds(
             inquisitorToFocusOn2nStage,
             timeToFocus
@@ -66,7 +70,8 @@ public class StageEffectController : MonoBehaviour
                 new Vector4(1f, 0.88f, 0.95f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),
-                0.15f
+                0.15f,
+                -10f
             )
         );
     }
@@ -74,7 +79,7 @@ public class StageEffectController : MonoBehaviour
     private void OnStage3(Component arg0)
     {
         inquisitorsFor3rdStage.SetActive(true);
-        
+
         StartCoroutine(SwitchCameraForNSeconds(
             inquisitorToFocusOn3rdStage,
             timeToFocus
@@ -84,7 +89,8 @@ public class StageEffectController : MonoBehaviour
                 new Vector4(1f, 0.80f, 0.95f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),
                 new Vector4(1f, 1f, 1f, 0f),
-                0.25f
+                0.25f,
+                -20f
             )
         );
     }
@@ -94,13 +100,15 @@ public class StageEffectController : MonoBehaviour
         Vector4 targetShadows,
         Vector4 targetMidtones,
         Vector4 targetHighlights,
-        float targetChromaticAberration
+        float targetChromaticAberration,
+        float targetHueShift
     )
     {
         Vector4 initialShadows = smh.shadows.value;
         Vector4 initialMidtones = smh.midtones.value;
         Vector4 initialHighlights = smh.highlights.value;
         float initialChromaticAberration = chromaticAberration.intensity.value;
+        float initialHueShiftValue = colorAdjustments.hueShift.value;
 
         float elapsedTime = 0f;
 
@@ -113,6 +121,7 @@ public class StageEffectController : MonoBehaviour
             smh.midtones.value = Vector4.Lerp(initialMidtones, targetMidtones, t);
             smh.highlights.value = Vector4.Lerp(initialHighlights, targetHighlights, t);
             chromaticAberration.intensity.value = Mathf.Lerp(initialChromaticAberration, targetChromaticAberration, t);
+            colorAdjustments.hueShift.value = Mathf.Lerp(initialHueShiftValue, targetHueShift, t);
 
             yield return null;
         }
@@ -133,6 +142,7 @@ public class StageEffectController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         cameraForStages.Priority.Value = 0;
     }
 }

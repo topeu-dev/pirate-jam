@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class FieldOfView : MonoBehaviour
 {
+    public SceneState SceneState;
     public float viewRadius;
 
     [Range(0, 360)]
@@ -28,7 +29,6 @@ public class FieldOfView : MonoBehaviour
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        // meshRenderer.enabled = false;
 
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
@@ -41,15 +41,17 @@ public class FieldOfView : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("FUFUFUFUFUFFUFUFUFUF");
+        meshRenderer.enabled = SceneState.isFovEnabled;
         InputActionSingleton.GeneralInputActions.Gameplay.Enable();
-        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed += EnableFov;
-        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled += DisableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed += ToggleFov;
+        // InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled += DisableFov;
     }
 
     private void OnDisable()
     {
-        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed -= EnableFov;
-        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled -= DisableFov;
+        InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed -= ToggleFov;
+        // InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.canceled -= DisableFov;
     }
 
     private void DisableFov(InputAction.CallbackContext obj)
@@ -57,56 +59,17 @@ public class FieldOfView : MonoBehaviour
         meshRenderer.enabled = false;
     }
 
-    private void EnableFov(InputAction.CallbackContext obj)
+    private void ToggleFov(InputAction.CallbackContext obj)
     {
-        meshRenderer.enabled = true;
+        meshRenderer.enabled = !meshRenderer.enabled;
     }
-
-
-    // IEnumerator FindTargetsWithDelay(float delay)
-    // {
-    //     while (true)
-    //     {
-    //         yield return new WaitForFixedUpdate();
-    //         FindVisibleTargets();
-    //     }
-    // }
+    
 
     void LateUpdate()
     {
         // FindVisibleTargets();
         DrawFieldOfView();
     }
-
-    // void FindVisibleTargets()
-    // {
-    //     visibleTargets.Clear();
-    //     Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
-    //
-    //     for (int i = 0; i < targetsInViewRadius.Length; i++)
-    //     {
-    //         Transform target = targetsInViewRadius[i].transform;
-    //         Vector3 dirToTarget = (target.position - transform.position).normalized;
-    //         if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
-    //         {
-    //             float dstToTarget = Vector3.Distance(transform.position, target.position);
-    //             Vector3 tempDir;
-    //             float tempDist;
-    //             
-    //             if (Physics.ComputePenetration(targetsInViewRadius[i], targetsInViewRadius[i].transform.position, targetsInViewRadius[i].transform.rotation,
-    //                     meshCollider, meshCollider.transform.position, meshCollider.transform.rotation,
-    //                     out tempDir, out tempDist
-    //                     ))
-    //             {
-    //        
-    //             }
-    //             if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
-    //             {
-    //                 visibleTargets.Add(target);
-    //             }
-    //         }
-    //     }
-    // }
 
     void DrawFieldOfView()
     {
@@ -165,9 +128,6 @@ public class FieldOfView : MonoBehaviour
         viewMesh.vertices = vertices;
         viewMesh.triangles = triangles;
         viewMesh.RecalculateNormals();
-        // viewMesh.RecalculateBounds();
-        // viewMesh.RecalculateTangents();
-        // viewMesh.OptimizeReorderVertexBuffer();
 
         meshCollider.sharedMesh = null;
         meshCollider.sharedMesh = viewMesh;

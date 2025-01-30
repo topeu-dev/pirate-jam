@@ -24544,6 +24544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e701c6cf86354c4a92814e55cf40f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneState: {fileID: 11400000, guid: f196a7db7d0a0b444ae392af51445c62, type: 2}
   viewRadius: 25
   viewAngle: 45
   targetMask:

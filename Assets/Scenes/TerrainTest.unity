@@ -6234,6 +6234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99e0d7348db43148aba92660fc90f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneState: {fileID: 11400000, guid: f196a7db7d0a0b444ae392af51445c62, type: 2}
   initialDemonCount: 8
   timeToFadeIn: 2
 --- !u!114 &1344364673
@@ -10791,6 +10792,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796778815914915679, guid: 1eaba7d57fb0e844283c2b84077da337, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796778815914915679, guid: 1eaba7d57fb0e844283c2b84077da337, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2639581085335710109, guid: 1eaba7d57fb0e844283c2b84077da337, type: 3}
