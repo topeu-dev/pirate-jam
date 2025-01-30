@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Utility;
 
@@ -68,17 +69,9 @@ namespace HUD.Menu
 
         public void RestartGame()
         {
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("TerrainTest");
         }
 
-        public void ToMainMenu()
-        {
-            //   
-        }
-
-        public void ContinueGame()
-        {
-        }
 
         public void OnSfxSliderChanged(float value)
         {
