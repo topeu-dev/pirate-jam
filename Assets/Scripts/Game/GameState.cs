@@ -55,7 +55,7 @@ namespace Game
 
         private void ToggleFovState(InputAction.CallbackContext obj)
         {
-            sceneState.isFovEnabled = !sceneState;
+            sceneState.isFovEnabled = !sceneState.isFovEnabled;
         }
 
         private void OnDisable()
