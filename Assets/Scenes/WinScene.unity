@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceLightPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -262,6 +266,10 @@ PrefabInstance:
     - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Name
       value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
@@ -393,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Name
       value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
@@ -10413,6 +10425,10 @@ PrefabInstance:
     - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Name
       value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
@@ -20751,6 +20767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceLightPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -20927,6 +20947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceLightPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -20995,6 +21019,10 @@ PrefabInstance:
     - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Name
       value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
@@ -36515,6 +36543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceLightPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -46806,6 +46838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaceLightPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -46884,6 +46920,10 @@ PrefabInstance:
     - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Name
       value: FaceLightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225340754543225262, guid: fa116c514dc268a49ad036332200cde7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344722996326114336, guid: fa116c514dc268a49ad036332200cde7, type: 3}
       propertyPath: m_Enabled

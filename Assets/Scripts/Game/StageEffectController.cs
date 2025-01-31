@@ -11,11 +11,20 @@ public class StageEffectController : MonoBehaviour
     public float transitionTime = 4f;
 
     public CinemachineCamera cameraForStages;
+
+    private float _initialMusicVolume; 
+    public AudioSource stage1Music;
+    
     public GameObject inquisitorToFocusOn2nStage;
     public GameObject inquisitorsFor2ndStage;
+    public AudioSource stage2Music;
+    
     public GameObject inquisitorToFocusOn3rdStage;
     public GameObject inquisitorsFor3rdStage;
+    public AudioSource stage3Music;
+    
     public AudioSource audioSourceToPlayOnStageChange;
+    
     public float timeToFocus;
 
     private ShadowsMidtonesHighlights smh;
@@ -24,7 +33,7 @@ public class StageEffectController : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("QWERTY" + Application.streamingAssetsPath);
+        // _initialMusicVolume = stage1Music.volume;
     }
 
     void Start()
@@ -59,6 +68,9 @@ public class StageEffectController : MonoBehaviour
 
     private void OnStage2(Component arg0)
     {
+        stage1Music.enabled = false;
+        stage2Music.enabled = true;
+        
         inquisitorsFor2ndStage.SetActive(true);
 
         StartCoroutine(SwitchCameraForNSeconds(
@@ -78,6 +90,9 @@ public class StageEffectController : MonoBehaviour
 
     private void OnStage3(Component arg0)
     {
+        stage2Music.enabled = false;
+        stage3Music.enabled = true;
+        
         inquisitorsFor3rdStage.SetActive(true);
 
         StartCoroutine(SwitchCameraForNSeconds(
