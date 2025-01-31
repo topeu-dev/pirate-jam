@@ -41,7 +41,6 @@ public class FieldOfView : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("FUFUFUFUFUFFUFUFUFUF");
         meshRenderer.enabled = SceneState.isFovEnabled;
         InputActionSingleton.GeneralInputActions.Gameplay.Enable();
         InputActionSingleton.GeneralInputActions.Gameplay.ShowFov.performed += ToggleFov;
@@ -63,7 +62,7 @@ public class FieldOfView : MonoBehaviour
     {
         meshRenderer.enabled = !meshRenderer.enabled;
     }
-    
+
 
     void LateUpdate()
     {
